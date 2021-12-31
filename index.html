@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/estilos/styles.css">
+    <title>Proyecto x</title>
+</head>
+<body>
+    
+    <header id="header">
+        <div class="logo">
+            <img src="res/images/logo.png" alt="RIDGI">
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a class="active" id="Home" href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#demo" id="Demo" >Demo</a>
+                </li>
+                <li>
+                    <a href="#features" id="Features">Features</a>
+                </li>
+                <li>
+                    <a href="#support" id="Support" target="_blank">Support</a>
+                </li>
+            </ul>
+        </div>
+        <div class="shop">
+            <a class="btn-shop" href="#shop">Buy Now!</a>
+            <a class="btn-shop sell" href="#shop">Sell Now!</a>
+        </div>
+    </header>
+
+    <section id="home" class="section">
+        <div class="banner">
+            <div class="promotion">
+                <p class="presentation">Music Actions</p>
+            </div>
+            <div id="home" class="main-banner">
+                <h1>Sale and Purchase of Musical Actions</h1>
+            </div>
+        </div>
+        <div id="particles-js"></div>
+    </section>
+
+    <div id="demo" class="demo">
+        <div class="block1">
+            <a href="#"><img class="music1" src="res/images/music1.jpg" alt=""><a>Traperos argentinos mas conocidos</a></a>
+        </div>
+        <div class="block2">
+            <a href="#"><img class="music2" src="res/images/music2.jpeg" alt=""><a>Actualmente como el mejor productor</a></a>
+        </div>
+    </div>
+
+    <div class="features" id="Features">
+        
+    </div>
+
+    <!--Scripts-->
+    
+    <script src="res/js/particles.js"></script>
+    <script src="res/js/app.js"></script>
+    
+    <script type="text/javascript">
+
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+    var headerShadow = document.getElementById("header")
+    var navbarHome = document.getElementById("Home");
+    var navbarDemo = document.getElementById("Demo");
+    var navbarFeatures = document.getElementById("Features");
+    var navbarSupport = document.getElementById("Support");
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        headerShadow.classList.add("shadow")
+    } else{
+        headerShadow.classList.remove("shadow")
+    }
+
+    if (document.body.scrollTop > -10 || document.documentElement.scrollTop > -10) {
+        navbarHome.classList.add("active")
+    } else{
+        navbarHome.classList.remove("active")
+    }
+
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        navbarHome.classList.remove("active");
+        navbarDemo.classList.add("active");
+    } else{
+        navbarDemo.classList.remove("active")
+    }
+}
+
+
+    </script>
+
+</body>
+</html>
